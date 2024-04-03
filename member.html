@@ -24,9 +24,9 @@
 	</style>
 </head>
 
-<body bgcolor="fffff0">
-<!-- ヘッダーの表示 -->
-<div id="header"></div>
+<body>
+<!-- ヘッダー、フッターの表示 -->
+<div id="base"></div>
 
     <script>
         window.onload = function() {
@@ -40,11 +40,12 @@
                     document.getElementById("base").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "header.html", true);
+            xhttp.open("GET", "base.html", true);
             xhttp.send();
         }
     </script>
     
+    <main>
     <div style="text-align:center;">
   
     <h1><span class="create_text1"> メンバ </span></h1>
@@ -92,25 +93,6 @@
     <div style = "padding-right:30%"><font size = 6 color = #6f5436><b> キャリアハウス </b></font></div>
     <br>
 	</font>
-	
-<!-- フッターの表示 -->
-<div id="footer"></div>
-
-    <script>
-        window.onload = function() {
-            includeHTML();
-        };
-
-        function includeHTML() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("footer").innerHTML = this.responseText;
-                }
-            };
-            xhttp.open("GET", "footer.html", true);
-            xhttp.send();
-        }
-    </script>
+	</main>
 </body>
 </html>
