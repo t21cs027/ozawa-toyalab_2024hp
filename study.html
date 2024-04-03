@@ -8,26 +8,33 @@
 		
 </head>
 
-<body>
-<!-- ヘッダー、フッターの表示 -->
-<div id="base"></div>
+<body bgcolor="fffff0">
+<main>
+<!-- ヘッダーの表示 -->
+<div id="header"></div>
 
     <script>
         window.onload = function() {
-            includeHTML();
+            includeHTML("header.html", "base");
+            includeHTML("footer.html", "footer");
         };
 
-        function includeHTML() {
+        function includeHTML(url, id) {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("base").innerHTML = this.responseText;
+                    document.getElementById(id).innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "base.html", true);
+            xhttp.open("GET", url, true);
             xhttp.send();
         }
     </script>
+    
+<!-- フッターの表示 -->
+<div id="footer"></div>
+
+	</main>
 
 </body>
 </html>
