@@ -9,8 +9,8 @@
 </head>
 
 <body>
-<!-- ヘッダー、フッターの表示 -->
-<div id="base"></div>
+<!-- ヘッダーの表示 -->
+<div id="header"></div>
 
     <script>
         window.onload = function() {
@@ -21,10 +21,30 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("base").innerHTML = this.responseText;
+                    document.getElementById("header").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "base.html", true);
+            xhttp.open("GET", "header.html", true);
+            xhttp.send();
+        }
+    </script>
+    
+<!-- フッターの表示 -->
+<div id="footer"></div>
+
+    <script>
+        window.onload = function() {
+            includeHTML();
+        };
+
+        function includeHTML() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("footer").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "footer.html", true);
             xhttp.send();
         }
     </script>
