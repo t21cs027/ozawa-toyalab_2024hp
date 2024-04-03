@@ -96,6 +96,7 @@
 </head>
 
 <body>
+<main>
 <!-- ヘッダー、フッターの表示 -->
 <div id="base"></div>
 
@@ -116,20 +117,6 @@
         }
     </script>
     
-    <main>
-    <header>
-		
-			<p class="name">2024年度小澤・鳥谷研究室</p>
-			<ul>
-					<li><a href="index.html">ホーム</a></li>
-					<li><a href="https://www.ccn.yamanashi.ac.jp/~ozawa/HP/index.html">研究室(外部リンク)</a></li>
-					<li><a href="member.html">メンバ</a></li>
-					<li><a href="study.html">研究</a></li>
-					<li><a href="topic.html">トピック</a></li>
-					<li><a href="laboratory_intoriduction.html">研究室紹介</a></li>
-					<li><a href="https://sites.google.com/view/ozawalaboratory-2023/%E3%83%9B%E3%83%BC%E3%83%A0">昨年度のページ(外部リンク)</a></li>				
-			</ul>
-		</header>
     <div style="text-align:center;">
   
     <h1><span class="create_text1"> メンバ </span></h1>
@@ -177,10 +164,25 @@
     <div style = "padding-right:30%"><font size = 6 color = #6f5436><b> キャリアハウス </b></font></div>
     <br>
 	</font>
-	
-	<footer>
-			<p>山梨大学工学部コンピュータ理工学科小澤・鳥谷研究室2024</p>
-		</footer>
+
+<div id="footer"></div>
+
+    <script>
+        window.onload = function() {
+            includeHTML();
+        };
+
+        function includeHTML() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("footer").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "footer.html", true);
+            xhttp.send();
+        }
+    </script>
 	</main>
 
 </body>
