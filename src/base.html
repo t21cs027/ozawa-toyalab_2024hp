@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		
+	<style>
+	
+		/*タイトル*/
+			header {
+				position: fixed;
+				width: 100%;
+				padding: 10px 0;
+				background: #ffffe0;
+				margin:0 auto;
+				text-align: center;
+				z-index: 1000;
+			}
+			
+		/* 研究室名 */
+			header .name {
+				font-size: 32px;
+				color: #6f5436;
+				letter-spacing: .2em;
+				font-weight: bold;
+			}
+			
+		/* メニュー */
+			header ul {
+				  text-align: center;
+				  padding: 0px 0px 10px 0px;
+				  margin: 0 auto;
+			}
+			
+			header li {
+				  list-style: none;
+				  display: inline-block;
+				  margin: 0 20px;
+			}
+			
+			header li a {
+				color: #6f5436;
+				text-decoration: none;
+				transition: text-decoration 0.3s ease;
+			}
+			
+		/* メニューのリンクホバーで線 */
+			header li a:hover {
+				text-decoration: underline;
+			}
+			
+			header li b {
+				color: #6f5436;
+				text-decoration: none;
+			}
+			
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+			
+			/*フッター*/
+			footer {
+				background-color: #ffffe0;
+				color: #6f5436;
+				text-align: center;
+				padding: 10px;
+				margin-top: auto;
+			}
+			
+			footer p {
+		    	font-size: 13px; /* フォントサイズを小さく */
+		    	opacity: 0.6; /* 不透明度を下げて色を薄くする */
+		    }
+	</style>
+</head>
+	<body>
+		<header>
+		
+			<p class="name">2024年度小澤・鳥谷研究室</p>
+			<ul>
+					<li><a href="home.html">ホーム</a></li>
+					<li><a href="https://www.ccn.yamanashi.ac.jp/~ozawa/HP/index.html">研究室(外部リンク)</a></li>
+					<li><a href="member.html">メンバ</a></li>
+					<li><a href="study.html">研究</a></li>
+					<li><a href="topic.html">トピック</a></li>
+					<li><a href="laboratory_intoriduction.html">研究室紹介</a></li>
+					<li><a href="https://sites.google.com/view/ozawalaboratory-2023/%E3%83%9B%E3%83%BC%E3%83%A0">昨年度のページ(外部リンク)</a></li>				
+			</ul>
+		</header>
+		
+		<footer>
+			<p>山梨大学工学部コンピュータ理工学科小澤・鳥谷研究室2024</p>
+		</footer>
+	</body>
+
+
+</html>
