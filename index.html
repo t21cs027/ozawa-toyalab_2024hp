@@ -4,10 +4,36 @@
 	<title>【ozawa-toyalab_2024hp】home</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+    	/*背景画像の設定*/
+    	.back{
+		  width: 100%;
+		  height: auto;
+		  background-image: url(image/home1.jpg);
+		  background-position: center;
+		  background-size: cover;
+		  text-align: center;
+		  opacity: 1.0;
+		}
+		.color{
+		  background-color: rgba(0, 0, 0, 0.26);
+		}
+		/*文字の設定*/
+		h2{
+		  line-height: 80px;
+		  color: #00fa9a;
+		  font-size: 30px
+		}
+		.outline{
+		  -webkit-text-stroke: 1px #008080;
+		  text-stroke: 1px #008080;
+		}    
+	</style>
 		
 </head>
 
-<body bgcolor="fffff0">
+<body>
 <main>
 <!-- ヘッダーの表示 -->
 <div id="header"></div>
@@ -29,6 +55,16 @@
             xhttp.send();
         }
     </script>
+    
+    <div class="back">
+    <div class="color">
+    <br><br><br>
+    	<div class="outline">
+        <h2>当研究室は<br>[聴覚を中心としたメディア感性工学]<br>および<br>[音響情報処理]<br>の研究に取り組んでいます</h2>
+        </div>
+    <br><br><br>
+    </div>
+</div>
     
 <!-- フッターの表示 -->
 <div id="footer"></div>
