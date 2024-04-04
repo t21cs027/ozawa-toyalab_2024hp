@@ -22,6 +22,18 @@
 			margin: auto; /* 適切なマージンを設定 */
       	}
       	
+      	.flex-video-container {
+        	width: 70%;
+        	max-width: 560px; /* 最大幅を560pxに設定 */
+        	margin: 0 auto; /* 中央揃え */
+    	}
+    
+    	.flex-video iframe {
+    		aspect-ratio: 16 / 9; /* 動画のアスペクト比 */
+       		width: 100%;
+       		height: auto;
+    	}
+      	
 	</style>
 		
 </head>
@@ -53,9 +65,19 @@
     <div style="text-align:center;">
     <h1><span class="create_text1"> 研究室紹介 </span></h1>
     <br><br>
-    <div style = "padding-right:30%"><font size = 6 color = #6f5436><b> 研究紹介動画 </b></font></div>
+    <div style = "padding-right:30%"><font size = 5 color = #6f5436><b> 研究紹介動画 </b></font></div>
     <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/uzMzk3ATbps?si=cnAIBhC83oY16ekt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="flex-video-container">
+    <div class="flex-video">
+        <iframe src="https://www.youtube.com/embed/uzMzk3ATbps?si=cnAIBhC83oY16ekt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+<!--
+    <div class="flex-video">
+    <iframe width="560" height="360" src="https://www.youtube.com/embed/uzMzk3ATbps?si=cnAIBhC83oY16ekt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    -->
     <br><br><br>
     <hr>
     
